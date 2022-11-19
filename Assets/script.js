@@ -1,7 +1,25 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+$(function () { 
+
+  $('.saveBtn').on("click", grabData);
+
+  function grabData() {
+
+    localStorage.setItem($(this).siblings('.description').val(), $(this).parent().attr('id'));
+
+  }
+
+  function refreshHour() {
+    var hour = daysjs().hour();
+
+    $('time-block').each(function() {
+      var appHour = 
+    })
+  }
+
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
