@@ -12,13 +12,18 @@ $(function () {
   }
 
   function refreshHour() {
-    var hour = daysjs().hour();
+    var hour = dayjs().hour();
 
     $('time-block').each(function() {
-      var appHour = 
+      
+      // parseInt converts the string into an integer
+      var appHour = parseInt.attr('id');
+      console.log(appHour);
+
     })
   }
 
+  refreshHour();
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
